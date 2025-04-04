@@ -31,7 +31,7 @@ A Python-based web application powered by Flask that serves as a media server si
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/yourusername/local-media-server.git
+    git clone https://github.com/adrian-slomka/local-media-server.git
     ```
 
 2. Create a [virtual environment](https://docs.python.org/3/library/venv.html) (optional but recommended):
