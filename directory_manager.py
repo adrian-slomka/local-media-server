@@ -17,6 +17,14 @@ def create_settings():
         os.makedirs('api_metadata')
         print("[ info ] Created folder 'api_metadata'.")
 
+
+    # Check if the file exists
+    if not os.path.exists("watchdog_temp.txt"):
+        # Create the file if it doesn't exist
+        with open("watchdog_temp.txt", 'w') as file:
+            file.write("This is a new file.")  # You can write any content here
+        print(f"'watchdog_temp.txt' has been created.")
+
 def delete_settings():
     if os.path.exists(PATH_FILE):
         os.remove(PATH_FILE)
