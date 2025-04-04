@@ -3,7 +3,12 @@
 A Python-based web application powered by Flask that serves as a media server similar to Plex or Jellyfin. This application is specifically "optimized" for machines with NVIDIA GPUs and requires the latest NVIDIA drivers for proper functionality. It automatically re-encodes media files to the widely-supported **x264 video codec** with **AAC audio** if they aren't already in this format. Please note that this app is intended for high-performance systems, and re-encoding can be resource-heavy.
 
 ## Web App Preview
-
+index
+![App Screenshot](https://raw.githubusercontent.com/adrian-slomka/local-media-server/main/app_preview/desktop_index_screenshot_preview.png)
+media page
+![App Screenshot](https://raw.githubusercontent.com/adrian-slomka/local-media-server/main/app_preview/desktop_page_screenshot_preview.png)
+media page episodes
+![App Screenshot](https://raw.githubusercontent.com/adrian-slomka/local-media-server/main/app_preview/desktop_page_ep_screenshot_preview.png)
 
 ## Features
 
@@ -41,14 +46,16 @@ A Python-based web application powered by Flask that serves as a media server si
 
 5. *Download **FFmpeg**: From [FFmpeg's official website](https://ffmpeg.org/download.html) download FFprobe.exe and FFmpeg.exe and drop them inside the app's main folder dir.
 
-6. (optional) Create .bat for start up convinience:
+6. Acquire TMDB API KEY from [TMDB](https://developer.themoviedb.org/docs/getting-started). Next, create .env in main app folder and paste the API KEY there like so: API_KEY=YourKey
+
+7. (optional) Create .bat for start up convinience:
 
     ```bash
     @echo off
     :: Activate the virtual environment
     call "%~dp0YourEnvName\Scripts\activate.bat"
 
-    :: Run the app.py using the Python from the virtual environment
+    :: Run the app.py using the Python
     python "%~dp0app.py"
 
     pause
@@ -66,8 +73,8 @@ A Python-based web application powered by Flask that serves as a media server si
 
 2. The web application will be accessible on [http://localhost:8000](http://localhost:8000). Open this URL in your web browser. 
 Additioanly, the app can be accessed on mobile devices when connected to the same wi-fi network:
-1) Get your hosting PC's local ip4 adress (open cmd and type: ipcofing and look for ipv4). 
-2) Next, on your mobile device connected to the same Wi-Fi network type that ip adress followed by :8000, example: 192.168.0.100:8000
+- Get your hosting PC's local ip4 adress (open cmd and type: ipcofing and look for ipv4). 
+- Next, on your mobile device connected to the same Wi-Fi network type that ip adress followed by :8000, example: 192.168.0.100:8000
 
 3. To add your media files first create folder where you will store your movies or series. 
 
