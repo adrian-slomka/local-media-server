@@ -1,4 +1,4 @@
-# Nvidia-Powered Media Server
+# Local Media Server
 
 A Python-based web application powered by Flask that serves as a media server similar to Plex or Jellyfin. This application is best used with machines with NVIDIA GPUs and requires the latest NVIDIA drivers for proper functionality. It automatically re-encodes media files to the widely-supported **x264 video codec** with **AAC audio** if they aren't already in this format. Please note that this app is intended for high-performance systems, and re-encoding can be resource-heavy.
 
