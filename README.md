@@ -44,7 +44,7 @@ A Python-based web application powered by Flask that serves as a media server si
 
 4. Make sure you have the latest **NVIDIA drivers** installed.
 
-5. *Download **FFmpeg**: From [FFmpeg's official website](https://ffmpeg.org/download.html) download FFprobe.exe and FFmpeg.exe and drop them inside the app's main folder dir.
+5. Download **FFmpeg**: From [FFmpeg's official website](https://ffmpeg.org/download.html) download pre-compiled exe (builds from gyan.dev). Extract FFprobe.exe and FFmpeg.exe inside the app's main folder.
 
 6. Acquire TMDB API KEY from [TMDB](https://developer.themoviedb.org/docs/getting-started). Next, create .env in main app folder and paste the API KEY there like so: API_KEY=YourKey
 
