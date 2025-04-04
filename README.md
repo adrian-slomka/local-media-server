@@ -1,13 +1,13 @@
 # Nvidia-Powered Media Server
 
-A Python-based web application powered by Flask that serves as a media server similar to Plex or Jellyfin. This application is specifically "optimized" for machines with NVIDIA GPUs and requires the latest NVIDIA drivers for proper functionality. It automatically re-encodes media files to the widely-supported **x264 video codec** with **AAC audio** if they aren't already in this format. Please note that this app is intended for high-performance systems, and re-encoding can be resource-heavy.
+A Python-based web application powered by Flask that serves as a media server similar to Plex or Jellyfin. This application is best used with machines with NVIDIA GPUs and requires the latest NVIDIA drivers for proper functionality. It automatically re-encodes media files to the widely-supported **x264 video codec** with **AAC audio** if they aren't already in this format. Please note that this app is intended for high-performance systems, and re-encoding can be resource-heavy.
 
 ## Web App Preview
-index
+
 ![App Screenshot](https://raw.githubusercontent.com/adrian-slomka/local-media-server/main/app_preview/desktop_index_screenshot_preview.png)
-media page
+
 ![App Screenshot](https://raw.githubusercontent.com/adrian-slomka/local-media-server/main/app_preview/desktop_page_screenshot_preview.png)
-media page episodes
+
 ![App Screenshot](https://raw.githubusercontent.com/adrian-slomka/local-media-server/main/app_preview/desktop_page_ep_screenshot_preview.png)
 
 ## Features
@@ -77,8 +77,8 @@ Additioanly, the app can be accessed on mobile devices when connected to the sam
 - Next, on your mobile device connected to the same Wi-Fi network type that ip adress followed by :8000, example: 192.168.0.100:8000
 
 3. To add your media files first create folder where you will store your movies or series. 
-
-4. On the web application, open menu and go to settings, select path to your series or movie folders. !important! Path can be selected only on your computer. Won't work on mobile.
+        
+4. In the main app's folder, open settings.json and paste your path/s like so: "series": ["D:/Lib/series","D/lib/series_folder2"], (don't forget comma)
 
 5. The app will scan new files on launch or dynamically and if needed will re-encoded incompatible files for html playback.
 
