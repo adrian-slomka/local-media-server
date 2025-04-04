@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='4304.webp') }}">
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <div class="">
+        <div id="content" class="root-layout">
+            <div class="app-layout ">
+
+                {% include 'header.html' %}
+                {% block body %}{% endblock %}
+                {% include 'footer.html' %}
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- External JavaScript for Menu -->
+    <script src="{{ url_for('static', filename='js/menu.js') }}"></script>
+
+    <script src="{{ url_for('static', filename='js/cards_load.js') }}"></script>
+    
+    <script src="{{ url_for('static', filename='js/scroller.js') }}"></script>
+    
+    <script src="{{ url_for('static', filename='js/detailsToggle.js') }}"></script>
+    
+    <script src="{{ url_for('static', filename='js/userRating.js') }}"></script>
+
+    <script src="{{ url_for('static', filename='js/userLiked.js') }}"></script>
+
+    <script src="{{ url_for('static', filename='js/moreButton.js') }}"></script>
+
+    <script src="{{ url_for('static', filename='js/userWatched.js') }}"></script>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+# Python env
+__pycache__/
+.env
+_venv/
+
+# For testing purposes
+library.db
+*.json
+test.py
+watchdog_temp.txt
+*.bat
+
+# Where API pulls data requests and saves as a backup
+api_metadata/
+posters/
+backdrops/
+keyFrames/
+
+ffmpeg.exe
+ffplay.exe
+ffprobe.exe
