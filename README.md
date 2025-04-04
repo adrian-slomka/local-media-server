@@ -104,7 +104,11 @@ If subtitles aren't extracted correctly from the embedded container (.mp4, .mkv 
 3) First, place the subtitle file in the same folder where you temporarily moved file.mp4
 4) Move back file.mp4 and wait for the app to re-scan
 
+### Will the app run without TMDB API?
+Yes. However extended info, poster and backdrops will be missing.
 
+### Will the app run without FFmpeg?
+Yes. However incompatible files, meaning anything other than .mp4 x264, aac will most likely not be playable.
 
 **Note:** This is a high-performance, GPU-intensive application. Use it on a machine with adequate resources for the best experience.
 **Note2:** I'm a college student and this is strictly a learning project. 
