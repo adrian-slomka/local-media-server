@@ -87,8 +87,7 @@ Additioanly, the app can be accessed on mobile devices when connected to the sam
 - **Re-encoding performance**: Since the app uses GPU acceleration, re-encoding large files or a large number of files can put a significant load on your system. Please ensure your machine has adequate resources (RAM, GPU power) for this task.
 - **Subtitle extraction**: The app supports subtitle extraction for embedded subtitles in video files, but the extraction process is limited. Only **English subtitles** are extracted and supported at the moment. Additionally, some subtitle formats in containers like `.mp4` may not be handled perfectly.
 - **File types**: While the app supports common video formats, it may have limited support for niche or less common file types. We recommend using **MP4** files for the best compatibility with the subtitle extraction and re-encoding features.
-- **library path selection**: At the moment, path to your library folders cannot be added via mobile devices.
-- **Bugs**: This is a very early version of this app.
+- **library path selection**: At the moment, path selection via website is WIP.
 
 ## FAQ
 
