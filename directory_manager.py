@@ -1,16 +1,16 @@
 import os
 import json
-import threading
 import tkinter as tk
 from tkinter import filedialog, messagebox
 
 PATH_FILE = "settings.json"  # Define path to settings file
 
+
 def create_settings():
     """Creates settings.json if it doesn't exist, with an initial structure, and creates a folder called 'api_metadata'."""
     if not os.path.exists(PATH_FILE):
         with open(PATH_FILE, 'w', encoding="utf-8") as f:
-            json.dump({"libraries": {}}, f, indent=4)
+            json.dump({"libraries": {"series": [], "movies": []}}, f, indent=4)
         print("[ info ] Created settings.json with default structure.")
 
     if not os.path.exists('api_metadata'):
@@ -72,6 +72,3 @@ def create_or_update_path(category, folder_path):
     # Add new path and save
     PATH["libraries"][category].append(folder_path)
     save_paths(PATH)
-
-    messagebox.showinfo("Path Saved", f"{category.capitalize()} path added:\n{folder_path}")
-    return folder_path

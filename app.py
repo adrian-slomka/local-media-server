@@ -6,8 +6,7 @@ from flask import Flask, request, render_template, send_from_directory,  redirec
 
 from load_data import MediaItem
 from database_create import create_database
-from directory_manager import create_settings
-from directory_manager import create_or_update_path
+from directory_manager import create_settings, create_or_update_path
 from watchdog_scanner import start_watchdog
 from library_manager import library_manager
 
@@ -184,43 +183,27 @@ def details_page(item_id, title):
     return render_template('item_page.html', media_items=media_items, item_id=item_id, title=title, duration=duration)
 
 
-
-
 import tkinter as tk
 from tkinter import filedialog
-from multiprocessing import Process, Queue
 
-queue = Queue()
+def show_file_dialog(category):
+    """NOT IMPLEMENTED"""
+    return None
 
-def show_file_dialog(queue, category):
-    """Worker function to show Tkinter file dialog in a separate process."""
-    root = tk.Tk()
-    root.withdraw()  # Hide the root Tkinter window
-    folder_path = filedialog.askdirectory(title=f"Select {category.capitalize()} Folder")
-    root.quit()  # Close the Tkinter root window
-    queue.put(folder_path)
-
-
-
-@app.route('/settings', methods=['GET', 'POST'])  # Ensure both methods are allowed
+@app.route('/settings', methods=['GET', 'POST'])
 def settings():
+    folder_path = None  # Variable to store the selected folder path
     if request.method == 'POST':  # Check if the request is POST
         category = request.form.get('category')  # Get 'category' from the form
-        if category in ['series', 'movies']:
-            # Create a Queue for communication
-            
-
-            # Start a new process to show the file dialog
-            process = Process(target=show_file_dialog, args=(queue, category))
-            process.daemon = True
-            process.start()
-            process.join()  # Wait for the file dialog process to finish
-
-            # Get the folder path from the queue
-            folder_path = queue.get()            
-            create_or_update_path(category, folder_path)  # Call your function for path selection
-
+        
+        # Open Window to choose path ++INCOMPLETE
+        folder_path = show_file_dialog(category)    
+        
+        if folder_path:
+            create_or_update_path(category, folder_path)
             return redirect(url_for('settings'))
+
+        return render_template('settings.html')
 
     # Handle GET request (initial page load)
     return render_template('settings.html')
