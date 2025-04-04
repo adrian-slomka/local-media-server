@@ -110,5 +110,6 @@ Yes. However extended info, poster and backdrops will be missing.
 ### Will the app run without FFmpeg?
 Yes. However incompatible files, meaning anything other than .mp4 x264, aac will most likely not be playable.
 
+**Note:** This is strictly a learning project. 
 **Note:** This is a high-performance, GPU-intensive application. Use it on a machine with adequate resources for the best experience.
-**Note2:** I'm a college student and this is strictly a learning project. 
+
