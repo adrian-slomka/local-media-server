@@ -2,11 +2,15 @@
 
 A Python-based web application powered by Flask that serves as a media server similar to Plex or Jellyfin. This application is specifically "optimized" for machines with NVIDIA GPUs and requires the latest NVIDIA drivers for proper functionality. It automatically re-encodes media files to the widely-supported **x264 video codec** with **AAC audio** if they aren't already in this format. Please note that this app is intended for high-performance systems, and re-encoding can be resource-heavy.
 
+## Web App Preview
+
+
 ## Features
 
 - **Web UI**: Decent looking and responsive web application with a dynamic search and watchlist feature.
+- **database**: Movies and series are saved into light-weight sqlite3 database for simplicity and easy access.
+- **tmdb api**: Integrated tmdb api requests that will provide user with some basic info and neat movie / series posters and their backdrops.
 - **No tracking**: Unlike Plex, the app doesn't save device's physical address, nor it's name and does not have any kind of cookies or ads.
-- **database**: movies and series are saved into light-weight sqlite3 database for simplicity and easy access.
 
 ## Requirements
 
